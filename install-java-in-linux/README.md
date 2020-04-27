@@ -26,5 +26,5 @@ export  PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 
 配置好后，运行命令`source ~/.bashrc`使配置生效，然后在终端里面输入`java -version`可以查看java是否安装配置成功，输入`javac -version`命令查看javac的版本。
 
-![Alt text](https://github.com/CRPJ/common-configuration/blob/master/img/java_version.png)
+![Alt text](https://github.com/wanghengg/common-configuration/blob/master/install-java-in-linux/java_version.png)
 

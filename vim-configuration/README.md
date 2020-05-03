@@ -66,4 +66,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ## 注意事项
 
-安装YouCompleteMe之后需要进入`~/.vimrc/plugged/YouCompleteMe/`中，运行`./install.py`
+安装YouCompleteMe之后需要进入`~/.vim/plugged/YouCompleteMe/`中，运行`./install.py`

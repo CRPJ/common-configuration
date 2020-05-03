@@ -7,24 +7,26 @@
 ```c++
 git clone git@github.com:vim/vim.git
 cd vim/
-./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-gui=gtk2 --enable-cscope --prefix=/usr/local
+./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/ --enable-gui=gtk2 --enable-cscope --prefix=/usr/local
 						
 make
 make install
 ```
+
+**在这里要注意，vim插件YouCompleteMe必须需要python3支持，所以这里需要配置python3的路径**
 
 其中，<code>--enable-pythoninterp</code>、<code>--enable-rubyinterp</code>、<code>--enable-perlinterp</code>、<code>--enable-luainterp</code>分别表示支持python、ruby、perl、lua编写的插件，--enable-gui=gtk2 表示生成采用 GNOME2 风格的 gvim，--enable-cscope 支持 cscope，--with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ 指定 python 路径（先自行安装 python 的头文件 python-devel），这几个特性非常重要，影响后面各类插件的使用。注意，你得预先安装相关依赖库的头文件，python-deｖ、python3-dev、ruby-de、lua5.2、libx11-devel、gtk2.0-devel、gtk3.0-devel、ncurses-devel，如果缺失，源码构建过程虽不会报错，但最终生成的 vim 很可能缺失某些功能。构建完成后在 vim 中执行
 
 安装所需要的依赖库：
 
 ```
-sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 liblua5.1-dev libperl-dev git
+sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python3-dev ruby-dev lua5.1 liblua5.1-dev libperl-dev git
 ```
 
 
 
 ```
-:echo has('python')
+:echo has('python3')
 ```
 
 若输出１则表示构建出的vim已经支持python，反之，０则表示不支持

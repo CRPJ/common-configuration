@@ -10,7 +10,7 @@ cd vim/
 ./configure --with-features=huge --enable-python3interp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/ --enable-gui=gtk2 --enable-cscope --prefix=/usr/local
 						
 make
-make install
+sudo make install
 ```
 
 **在这里要注意，vim插件YouCompleteMe必须需要python3支持，所以这里需要配置python3的路径**
@@ -29,7 +29,7 @@ sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev liba
 :echo has('python3')
 ```
 
-若输出１则表示构建出的vim已经支持python，反之，０则表示不支持
+若输出１则表示构建出的vim已经支持python3，反之，０则表示不支持
 
 ## 插件管理
 
